@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VehiculoCatalogoCrud.ViewModel;
 
 namespace VehiculoCatalogoCrud
 {
@@ -20,9 +21,17 @@ namespace VehiculoCatalogoCrud
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public  ComboBox CbFabricantes 
+        {
+            get { return cbFabricantes; }
+            set { cbFabricantes = value;}
+        }
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel(this);
         }
     }
 }

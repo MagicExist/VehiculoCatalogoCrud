@@ -16,6 +16,6 @@ namespace VehiculoCatalogoCrud.Core
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-
+        
     }
 }
